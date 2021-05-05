@@ -1,0 +1,25 @@
+.header{
+    text-align: center;
+    background-color: #faf2da;
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github{
+    max-width: 300px;
+    height: auto;
+}
+
+.titulo{
+    font-style: bold;
+    color: #4a503d;
+    font-size: 40px;
+}
+
+.logo{
+    max-width: 300px;
+    height: auto;
+}
