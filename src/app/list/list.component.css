@@ -1,0 +1,16 @@
+.tarjeta{
+    background-color: #eeeeee;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;  
+}
+
+.show-card{
+    margin: 20px;
+    
+}
