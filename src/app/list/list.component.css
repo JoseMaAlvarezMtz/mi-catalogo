@@ -14,3 +14,12 @@
     margin: 20px;
     
 }
+
+label {
+    display: block;
+}
+
+input{
+    display: block;
+    width: 100%;
+}

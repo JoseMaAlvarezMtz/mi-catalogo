@@ -1,8 +1,34 @@
 <div *ngFor="let auto of autos" class="tarjeta">
     <div class="show-card">
-        <fa-icon [icon]="faEye"></fa-icon>
+        <fa-icon [icon]="faEye" (click)="open(content, auto)"></fa-icon>
     </div>
     <div class="show-card">
         {{auto.descripcion}}
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{autoseleccionado.marca}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="modelo">Submarca: </label>
+          <input type="text" value={{autoseleccionado.submarca}}>
+          <label for="modelo">Modelo: </label>
+          <input type="text" value={{autoseleccionado.modelo}}>
+          <label for="modelo">Descripcion: </label>
+          <input type="text" value={{autoseleccionado.descripcion}}>
+          <label for="modelo">Fecha de registro: </label>
+          <input type="text" value={{autoseleccionado.fecha_registro}}>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Cerrar</button>
+    </div>
+  </ng-template>
