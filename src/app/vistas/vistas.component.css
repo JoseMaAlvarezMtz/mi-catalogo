@@ -6,8 +6,6 @@
     display: flex;
     justify-content: space-evenly;
     margin: 0;
-    
-    
 }
 
 .bloque{
@@ -15,4 +13,13 @@
     width: 100%;
     text-align: center;
     color: #e1f1dd;
+    text-decoration: none;
+}
+
+.bloque:hover{
+    background-color: #1cc5dc;
+}
+
+.active{
+    background-color: #a7bbc7;
 }
