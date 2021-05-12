@@ -10,13 +10,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let auto of automoviles; index as i">
+    <tr *ngFor="let auto of automoviles | slice: (page-1) * pageSize : page * pageSize; index as i">
       <th scope="row">{{ i + 1 }}</th>
       <td>{{ auto.marca }}</td>
       <td>{{ auto.submarca  }}</td>
       <td>{{ auto.modelo  }}</td>
       <td>{{ auto.descripcion  }}</td>
       <td>{{ auto.fecha_registro  }}</td>
+      <td><fa-icon [icon]="faTrash" ></fa-icon></td>
+      <td><fa-icon [icon]="faEdit" ></fa-icon></td>
     </tr>
     </tbody>
   </table>
+
+  <ngb-pagination [collectionSize]="automoviles.length" [(page)]="page" [pageSize]="pageSize" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>

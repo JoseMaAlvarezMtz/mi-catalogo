@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Automovil } from '../models';
 import { AutosService } from '../servicios/autos.service';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-table',
@@ -9,6 +11,11 @@ import { AutosService } from '../servicios/autos.service';
 })
 export class TableComponent implements OnInit {
 
+  faTrash = faTrash;
+  faEdit = faEdit;
+
+  pageSize = 15;
+  page = 1;
   automoviles: Automovil[] = [];
   constructor(private autoService: AutosService) { }
 

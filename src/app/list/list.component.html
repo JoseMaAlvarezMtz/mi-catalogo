@@ -1,4 +1,4 @@
-<div *ngFor="let auto of autos" class="tarjeta">
+<div *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize" class="tarjeta">
     <div class="show-card">
         <fa-icon [icon]="faEye" (click)="open(content, auto)"></fa-icon>
     </div>
@@ -6,6 +6,8 @@
         {{auto.descripcion}}
     </div>
 </div>
+
+<ngb-pagination [collectionSize]="autos.length" [(page)]="page" [pageSize]="pageSize" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
 
 <ng-template #content let-modal>
     <div class="modal-header">

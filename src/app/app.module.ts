@@ -10,6 +10,7 @@ import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TableComponent } from './table/table.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
