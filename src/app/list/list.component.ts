@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-import { AUTOMOVILES } from '../data';
 import { Automovil } from '../models';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap'
+import { AutosService } from '../servicios/autos.service';
 
 @Component({
   selector: 'app-list',
@@ -17,7 +17,7 @@ export class ListComponent implements OnInit {
 
   closeResult = '';
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private autoService: AutosService) {}
 
   open(content: any, auto: Automovil) {
     this.autoseleccionado = auto;
@@ -39,7 +39,9 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.autos = AUTOMOVILES;
+    this.autoService.getautos().subscribe((autosTemp)=>{
+      this.autos = autosTemp.data ;
+    })
   }
 
 

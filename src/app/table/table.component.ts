@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AUTOMOVILES } from '../data';
 import { Automovil } from '../models';
+import { AutosService } from '../servicios/autos.service';
 
 @Component({
   selector: 'app-table',
@@ -10,11 +10,14 @@ import { Automovil } from '../models';
 export class TableComponent implements OnInit {
 
   automoviles: Automovil[] = [];
-  constructor() { }
+  constructor(private autoService: AutosService) { }
 
   ngOnInit(): void {
-    this.automoviles = AUTOMOVILES;
 
+    this.autoService.getautos().subscribe((autosTemp)=>{
+      this.automoviles = autosTemp.data ;
+    })
+    
   }
 
 }
