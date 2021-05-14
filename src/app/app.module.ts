@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TableComponent } from './table/table.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component'
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalEditarComponent } from './modal-editar/modal-editar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     VistasComponent,
     ListComponent,
     TableComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ModalEditarComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     NgbPaginationModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[ModalEditarComponent]
 })
 export class AppModule { }

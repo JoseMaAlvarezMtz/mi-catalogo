@@ -14,7 +14,7 @@ export class ListComponent implements OnInit {
   autoseleccionado!: Automovil;
 
   faEye = faEye;
-  pageSize = 15;
+  pageSize = 10;
   page = 1;
 
   closeResult = '';
