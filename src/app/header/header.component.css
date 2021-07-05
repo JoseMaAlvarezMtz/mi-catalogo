@@ -1,6 +1,6 @@
 .header{
     text-align: center;
-    background-color: #faf2da;
+    background-color: #1D9303;
     height: 140px;
     width: 100%;
     display: flex;
@@ -8,18 +8,13 @@
     align-items: center;
 }
 
-.github{
-    max-width: 300px;
+.github,.logo{
+    max-width: auto;
     height: auto;
 }
 
 .titulo{
     font-style: bold;
-    color: #4a503d;
+    color: #ffffff;
     font-size: 40px;
-}
-
-.logo{
-    max-width: 300px;
-    height: auto;
 }
